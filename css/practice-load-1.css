@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.loadAnimeWrap{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	left: 0;
+	pointer-events: none;
+}
+.loadAnime{
+	width: 100vw;
+	height: 50vh;
+	position: absolute;
+	left:0;
+}
+.loadAnime:nth-child(1){
+	top:0;
+	background-color: blue;
+	transform: translateY(-100%);
+	animation: loadAnime1 2.5s;
+}
+.loadAnime:nth-child(2){
+	bottom:0;
+	background-color: yellow;
+	transform: translateY(100%);
+	animation: loadAnime2 2.5s;
+}
+@keyframes loadAnime1{
+	0%{
+		transform: translateX(-100%);
+	}
+	10%{
+		transform: translateX(-100%);
+	}
+	40%{
+		transform: translateX(0);
+	}
+	70%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateY(-100%);
+	}
+}
+@keyframes loadAnime2{
+	0%{
+		transform: translateX(100%);
+	}
+	20%{
+		transform: translateX(100%);
+	}
+	50%{
+		transform: translateX(0);
+	}
+	70%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateY(100%);
+	}
+}
+@keyframes loadAnime3{
+	0%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}

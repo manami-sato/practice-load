@@ -1,0 +1,90 @@
+*{
+	padding: 0;
+	margin:0;
+}
+.loadAnimeWrap{
+	display: flex;
+	position: fixed;
+	top:0;
+	left: 0;
+	pointer-events: none;
+}
+.loadAnime{
+	width: 100vw;
+	height: 100vh;
+	transform: translateX(100%);
+	position: absolute;
+	-webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+	clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);  
+}
+.loadAnime:nth-child(1){
+	background: rgb(1, 1, 170);
+	z-index: 5;
+	position: absolute;
+	animation: animation1 3s ease-in-out;
+}
+.loadAnime:nth-child(2){
+	background: rgb(200, 238, 63);
+	z-index: 10;
+	animation: animation2 3s ease-in-out;
+	animation-delay: 0.3s;
+}
+.loadAnime:nth-child(3){
+	background: rgb(1, 1, 170);
+	z-index: 15;
+	animation: animation3 3s ease-in-out;
+	animation-delay: 0.5s;
+}
+@keyframes animation1{
+	0%{
+		transform: translateX(100%);
+	}
+	20%{
+		transform: translateX(40%);
+	}
+	40%{
+		transform: translateX(40%);
+	}
+	90%{
+		transform: translateX(-100%);
+	}	
+	100%{
+		transform: translateX(-100%);
+	}
+}
+@keyframes animation2{
+	0%{
+		transform: translateX(100%);
+	}
+	20%{
+		transform: translateX(50%);
+	}
+	40%{
+		transform: translateX(50%);
+		width: 100vw;
+	}
+	80%{
+		transform: translateX(-100%);
+		width: 10vw;
+	}
+	100%{
+		transform: translateX(-100%);
+	}
+}
+@keyframes animation3{
+	0%{
+		transform: translateX(100%);
+	}
+	20%{
+		transform: translateX(60%);
+	}
+	40%{
+		transform: translateX(60%);
+	}
+	70%{
+		transform: translateX(-100%);
+	}
+	100%{
+		transform: translateX(-100%);
+	}
+}
